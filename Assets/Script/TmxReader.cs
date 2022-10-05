@@ -9,7 +9,6 @@ public class TmxReader : MonoBehaviour
     {
         TextAsset text = Resources.Load<TextAsset>(string.Format("{0}/{1}", "Map", "Level"));  // Assets/Resources/Map
         JSONNode data = JSONNode.Parse(text.text).AsObject;//将tmx文本转化为json对象
-        Debug.Log(data["layernumber"]);
         //foreach (var layer in data["layers"])
         for (int cur_layer = 0; cur_layer < data["layernumber"]; cur_layer++)//["type"] ==  "objectgroup"   "tilelayer"
         {
