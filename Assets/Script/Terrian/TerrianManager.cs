@@ -7,7 +7,7 @@ public class TerrianManager : MonoBehaviour
     public RotationCenter rotationCenter;
     public Collider2D rotationCenterCollider;
     public Rigidbody2D rotationCenterRigidbody;
-    public Grass grass;
+    public Enemy enemy;
     public Bull bull;
     public GameObject hint;
 
@@ -17,7 +17,11 @@ public class TerrianManager : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    /*
+     * 1. 第一次点击地块时
+     * 2. 点击同一重复地块时
+     * 3. 点击不同地块时
+     */
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
