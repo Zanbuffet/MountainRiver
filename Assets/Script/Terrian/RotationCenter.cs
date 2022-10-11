@@ -50,7 +50,7 @@ public class RotationCenter : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("OnTriggerEnter");
+       // Debug.Log("OnTriggerEnter");
         AroundTerrian.Add(other.gameObject);
     }
  
@@ -61,7 +61,7 @@ public class RotationCenter : MonoBehaviour
  
     private void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("OnTriggerExit");
+        //Debug.Log("OnTriggerExit");
         AroundTerrian.Remove(other.gameObject);
     }
     public Vector3 RotateRound(Vector3 position, Vector3 center, Vector3 axis, float angle)

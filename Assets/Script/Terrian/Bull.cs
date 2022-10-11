@@ -21,6 +21,7 @@ public class Bull : MonoBehaviour
     void Start()
     {
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
+        GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/bull2");
     }
 
     private void FixedUpdate()
@@ -47,10 +48,12 @@ public class Bull : MonoBehaviour
                 switch (state)
                 {
                     case State.Small:
-                        m_SpriteRenderer.sprite = Resources.Load<Sprite>("");   // 牛变为中等大小
+                        m_SpriteRenderer.sprite = Resources.Load<Sprite>("Sprites/bull2");   // 牛变为中等大小
+                        state = State.Middle;
                         break;
                     case State.Middle:
-                        m_SpriteRenderer.sprite = Resources.Load<Sprite>("");   // 牛变大
+                        m_SpriteRenderer.sprite = Resources.Load<Sprite>("Sprites/bull3");   // 牛变大
+                        state = State.Big;
                         break;
                     case State.Big:                                                 // 游戏失败
                         GetExit();
@@ -67,16 +70,20 @@ public class Bull : MonoBehaviour
                         GetExit();
                         break;
                     case State.Middle:
-                        m_SpriteRenderer.sprite = Resources.Load<Sprite>("");   // 牛变小
+                        m_SpriteRenderer.sprite = Resources.Load<Sprite>("Sprites/bull1");   // 牛变小
+                        state = State.Small;
                         break;
                     case State.Big:
-                        m_SpriteRenderer.sprite = Resources.Load<Sprite>("");   // 牛变为中等大小
+                        m_SpriteRenderer.sprite = Resources.Load<Sprite>("Sprites/bull2");   // 牛变为中等大小
+                        state = State.Middle;
                         break;
                 }
                 terrain.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("");
                 terrain.transform.tag = "Base";
-                // 交换双方位置
                 // DoMove
+                GetComponent<BaseTerrian>().goalPos = terrain.transform.localPosition;     //牛被田野吸过去
+                GetComponent<BaseTerrian>()._curState = BaseTerrian.curState.move;
+
             }
         }
     }

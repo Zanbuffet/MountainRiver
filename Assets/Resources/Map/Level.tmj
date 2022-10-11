@@ -130,6 +130,5 @@
  "tilewidth":14,
  "type":"map",
  "version":"1.9",
- "width":20,
- "layernumber":3
+ "width":20
 }

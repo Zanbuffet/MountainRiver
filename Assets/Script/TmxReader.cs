@@ -49,10 +49,10 @@ public class TmxReader : MonoBehaviour
                         int gid = arr_layers_data[j + i * col];
                         if (gid == 0)  //如果值为0则认为该格没有地块，跳过该格
                             continue;
-
-                        var go = Instantiate(Resources.Load(string.Format("{0}/{1}", "Grids", "GridPre"))) as GameObject;
+                        //var go = Instantiate(Resources.Load(string.Format("{0}/{1}", "Grids", "GridPre"))) as GameObject;
+                        var go = Instantiate(Resources.Load(string.Format("{0}/{1}", "Grids", gid-1))) as GameObject;
                         go.name = (string.Format("({0},{1})", j+1, i+1));
-                        go.GetComponent<SpriteRenderer>().sprite = Resources.LoadAll<Sprite>("Map/hexmini")[data["layers"][draw_layer]["data"][j + i * col] - 1];
+                        go.GetComponent<SpriteRenderer>().sprite = Resources.LoadAll<Sprite>("Map/hexmini")[gid - 1];
                         go.GetComponent<SpriteRenderer>().sortingOrder = draw_layer;
                         go.transform.SetParent(layer.transform);
 

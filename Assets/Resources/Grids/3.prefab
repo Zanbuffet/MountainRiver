@@ -12,11 +12,12 @@ GameObject:
   - component: {fileID: 5202607761916587862}
   - component: {fileID: 2388195358000002089}
   - component: {fileID: 2842315417098846683}
+  - component: {fileID: 1277093935894047735}
   - component: {fileID: -4300838411222552512}
   - component: {fileID: 268004486822208222}
   m_Layer: 0
-  m_Name: GridPre
-  m_TagString: Center
+  m_Name: 3
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,13 +112,26 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2159648924930741716}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 864af014ac97363439354f5b86962d74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   AroundTerrian: []
   selected: 0
+--- !u!114 &1277093935894047735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2159648924930741716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14ac17611a17f1a4b99ffa4c926ef30b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aroundTerrain: []
 --- !u!114 &-4300838411222552512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,6 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goalPos: {x: 0, y: 0, z: 0}
+  locked: 0
   _curState: 0
 --- !u!50 &268004486822208222
 Rigidbody2D:
