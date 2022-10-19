@@ -27,6 +27,7 @@ public class Bull : MonoBehaviour
     private void FixedUpdate()
     {
         CheckAroundTerrain();
+        CheckSprite();
     }
     
     /// <summary>
@@ -41,22 +42,22 @@ public class Bull : MonoBehaviour
         {
             if (terrain.CompareTag("Enemy"))
             {
-                GetExit();
+                Failed();
             }
             if (terrain.CompareTag("Grass"))
             {
                 switch (state)
                 {
                     case State.Small:
-                        m_SpriteRenderer.sprite = Resources.Load<Sprite>("Sprites/bull2");   // 牛变为中等大小
+                        //m_SpriteRenderer.sprite = Resources.Load<Sprite>("Sprites/bull2");   // 牛变为中等大小
                         state = State.Middle;
                         break;
                     case State.Middle:
-                        m_SpriteRenderer.sprite = Resources.Load<Sprite>("Sprites/bull3");   // 牛变大
+                        //m_SpriteRenderer.sprite = Resources.Load<Sprite>("Sprites/bull3");   // 牛变大
                         state = State.Big;
                         break;
                     case State.Big:                                                 // 游戏失败
-                        GetExit();
+                        Failed();
                         break;
                 }
                 terrain.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("");
@@ -67,14 +68,14 @@ public class Bull : MonoBehaviour
                 switch (state)
                 {
                     case State.Small:                                               // 游戏失败
-                        GetExit();
+                        Failed();
                         break;
                     case State.Middle:
-                        m_SpriteRenderer.sprite = Resources.Load<Sprite>("Sprites/bull1");   // 牛变小
+                        //m_SpriteRenderer.sprite = Resources.Load<Sprite>("Sprites/bull1");   // 牛变小
                         state = State.Small;
                         break;
                     case State.Big:
-                        m_SpriteRenderer.sprite = Resources.Load<Sprite>("Sprites/bull2");   // 牛变为中等大小
+                        //m_SpriteRenderer.sprite = Resources.Load<Sprite>("Sprites/bull2");   // 牛变为中等大小
                         state = State.Middle;
                         break;
                 }
@@ -87,6 +88,21 @@ public class Bull : MonoBehaviour
             }
         }
     }
+    private void CheckSprite()
+    {
+        switch (state)
+                {
+                    case State.Small:
+                        m_SpriteRenderer.sprite = Resources.Load<Sprite>("Sprites/bull1");   
+                        break;
+                    case State.Middle:
+                        m_SpriteRenderer.sprite = Resources.Load<Sprite>("Sprites/bull2");   
+                        break;
+                    case State.Big:                                                 
+                        m_SpriteRenderer.sprite = Resources.Load<Sprite>("Sprites/bull3");   
+                        break;
+                }
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         aroundTerrain.Add(other.gameObject);
@@ -97,7 +113,7 @@ public class Bull : MonoBehaviour
         aroundTerrain.Remove(other.gameObject);
     }
 
-    private void GetExit()
+    private void Failed()
     {
         #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;

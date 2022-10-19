@@ -1,4 +1,12 @@
 { "compressionlevel":-1,
+ "editorsettings":
+    {
+     "export":
+        {
+         "format":"json",
+         "target":"Level.tmj"
+        }
+    },
  "height":20,
  "hexsidelength":6,
  "infinite":false,
@@ -99,6 +107,22 @@
  "nextlayerid":5,
  "nextobjectid":5,
  "orientation":"hexagonal",
+ "properties":[
+        {
+         "name":"bullNumber",
+         "type":"int",
+         "value":2
+        }, 
+        {
+         "name":"normalStep",
+         "type":"int",
+         "value":20
+        }, 
+        {
+         "name":"starStep",
+         "type":"int",
+         "value":10
+        }],
  "renderorder":"right-down",
  "staggeraxis":"y",
  "staggerindex":"odd",
@@ -130,6 +154,5 @@
  "tilewidth":14,
  "type":"map",
  "version":"1.9",
- "width":20,
- "layernumber":3
+ "width":20
 }

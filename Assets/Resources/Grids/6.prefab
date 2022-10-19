@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 7451124945775027674}
   - component: {fileID: 5202607761916587862}
   - component: {fileID: 2388195358000002089}
-  - component: {fileID: 2842315417098846683}
+  - component: {fileID: 3221743021341209603}
   - component: {fileID: -4300838411222552512}
   - component: {fileID: 268004486822208222}
   m_Layer: 0
-  m_Name: 1
-  m_TagString: Center
+  m_Name: 6
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,7 +104,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.2
---- !u!114 &2842315417098846683
+--- !u!114 &3221743021341209603
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,15 +113,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2159648924930741716}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 864af014ac97363439354f5b86962d74, type: 3}
+  m_Script: {fileID: 11500000, guid: b5196e46bd227b741bde99ada0e78d02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AroundTerrian: []
-  selected: 0
-  starStep: 0
-  normalStep: 0
-  leftStarStepText: {fileID: 3284505804584462002, guid: ba2618a8a000c4f4c9d6d181b902e675, type: 3}
-  leftNormalText: {fileID: 6275234680175637256, guid: 4abf34d89aa1ad0468b8c3107c3473ff, type: 3}
+  aroundTerrain: []
+  winNumber: 0
+  curNumber: 0
 --- !u!114 &-4300838411222552512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,7 +126,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2159648924930741716}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f94c66fa5b5b1d44b02225f0be3c3f4, type: 3}
   m_Name: 

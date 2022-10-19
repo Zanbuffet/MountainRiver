@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class TmxReader : MonoBehaviour
 {
+    public string levelFile;
     void Start()
     {
-        TextAsset text = Resources.Load<TextAsset>(string.Format("{0}/{1}", "Map", "Level"));  // Assets/Resources/Map
+        TextAsset text = Resources.Load<TextAsset>(string.Format("{0}/{1}", "Map", levelFile));  // Assets/Resources/Map
         JSONNode data = JSONNode.Parse(text.text).AsObject;//将tmx文本转化为json对象
         //foreach (var layer in data["layers"])
         for (int cur_layer = 0; cur_layer < data["layernumber"]; cur_layer++)//["type"] ==  "objectgroup"   "tilelayer"
@@ -55,6 +56,16 @@ public class TmxReader : MonoBehaviour
                         go.GetComponent<SpriteRenderer>().sprite = Resources.LoadAll<Sprite>("Map/hexmini")[gid - 1];
                         go.GetComponent<SpriteRenderer>().sortingOrder = draw_layer;
                         go.transform.SetParent(layer.transform);
+
+                        if(go.CompareTag("Goal"))
+                        {
+                            go.GetComponent<Goal>().winNumber = data["properties"][0]["value"];
+                        }
+                        if(go.CompareTag("Center"))
+                        {
+                            go.GetComponent<RotationCenter>().starStep = data["properties"][2]["value"];
+                            go.GetComponent<RotationCenter>().normalStep = data["properties"][1]["value"];
+                        }
 
                         //parse tiled properties when drawing    ////not test yet!!!!!!
                         if (tileproperties)

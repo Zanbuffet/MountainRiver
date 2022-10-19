@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy1 : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     public List<GameObject> aroundTerrain = new List<GameObject>();
     
@@ -18,11 +18,7 @@ public class Enemy1 : MonoBehaviour
     {
         foreach (var terrain in aroundTerrain)
         {
-            if (terrain.CompareTag("Grass"))
-            {
-                terrain.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("");
-                terrain.transform.tag = "Base";
-            }
+            //吃牛，代码在牛上
         }
     }
     
