@@ -35,4 +35,9 @@ public class LevelSelection : MonoBehaviour
                 break;
         }
     }
+    
+    public void SelectLevel(int levelID)
+    {
+        SceneManager.LoadScene(levelID);
+    }
 }
