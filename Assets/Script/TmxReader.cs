@@ -59,12 +59,12 @@ public class TmxReader : MonoBehaviour
 
                         if(go.CompareTag("Goal"))
                         {
-                            go.GetComponent<Goal>().winNumber = data["properties"][0]["value"];
+                            go.GetComponent<Goal>().winNumber = data["properties"][0]["value"];//牛的数量
                         }
                         if(go.CompareTag("Center"))
                         {
-                            go.GetComponent<RotationCenter>().starStep = data["properties"][2]["value"];
-                            go.GetComponent<RotationCenter>().normalStep = data["properties"][1]["value"];
+                            go.GetComponent<RotationCenter>().starStep = data["properties"][2]["value"];//三星步数
+                            go.GetComponent<RotationCenter>().normalStep = data["properties"][1]["value"];//最大步数
                         }
 
                         //parse tiled properties when drawing    ////not test yet!!!!!!
