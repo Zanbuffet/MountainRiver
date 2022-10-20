@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelName: 1-1
   Complete: 0
-  FirstStar: 0
-  SecondStar: 0
+  FirstStar: 1
+  SecondStar: 1
   ThirdStar: 0
