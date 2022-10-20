@@ -18,19 +18,32 @@ public class EndPanel : MonoBehaviour
     [SerializeField] private Image star1;
     [SerializeField] private Image star2;
     [SerializeField] private Image star3;
-    
+
+
+    [SerializeField] private Image result;
+    [SerializeField] private Sprite[] resultSprites;
+
     [SerializeField] private Sprite[] starSprites;
     
     public void OnWin()
     {
         levelManager = FindObjectOfType<LevelManager>();
         endPanel.SetActive(true);
+        result.sprite = resultSprites[1];
+
         star1.sprite = levelManager.lvObject.FirstStar ? starSprites[1] : starSprites[0];
         goal1.isOn = levelManager.lvObject.FirstStar ? true : false;
         star2.sprite = levelManager.lvObject.SecondStar ? starSprites[1] : starSprites[0];
         goal2.isOn = levelManager.lvObject.SecondStar ? true : false;
         star3.sprite = levelManager.lvObject.ThirdStar ? starSprites[1] : starSprites[0];
         goal3.isOn = levelManager.lvObject.ThirdStar ? true : false;
+    }
+
+    public void OnLose()
+    {
+        levelManager = FindObjectOfType<LevelManager>();
+        endPanel.SetActive(true);
+        result.sprite = resultSprites[0];
     }
 
     public void NextLevel()
@@ -42,8 +55,13 @@ public class EndPanel : MonoBehaviour
         else
             SceneManager.LoadScene(index);
     }
-    private void Start()
+    private IEnumerator Start()
     {
-        //OnWin();//test
+        //test
+        yield return new WaitForSeconds(1f);
+        levelManager = FindObjectOfType<LevelManager>();
+        if(levelManager.lvObject.Complete) OnWin();
+        else OnLose();
+        
     }
 }
