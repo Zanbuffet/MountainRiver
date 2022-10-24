@@ -11,6 +11,7 @@ public class EndPanel : MonoBehaviour
 {
     private LevelManager levelManager;
     [SerializeField] private GameObject endPanel;
+    [SerializeField] private GameObject pauseMenu;
     [SerializeField] private Toggle goal1;
     [SerializeField] private Toggle goal2;
     [SerializeField] private Toggle goal3;
@@ -18,12 +19,14 @@ public class EndPanel : MonoBehaviour
     [SerializeField] private Image star1;
     [SerializeField] private Image star2;
     [SerializeField] private Image star3;
-
+    [SerializeField] private Button pause;
 
     [SerializeField] private Image result;
     [SerializeField] private Sprite[] resultSprites;
 
     [SerializeField] private Sprite[] starSprites;
+
+
     
     public void OnWin()
     {
@@ -45,6 +48,10 @@ public class EndPanel : MonoBehaviour
         endPanel.SetActive(true);
         result.sprite = resultSprites[0];
     }
+    public void OnPause()
+    {
+        pauseMenu.SetActive(true);
+    }
 
     public void NextLevel()
     {
@@ -58,10 +65,17 @@ public class EndPanel : MonoBehaviour
     private IEnumerator Start()
     {
         //test
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.1f);
         levelManager = FindObjectOfType<LevelManager>();
         if(levelManager.lvObject.Complete) OnWin();
         else OnLose();
         
     }
+
+    // private void Start()
+    // {
+    //     levelManager = FindObjectOfType<LevelManager>();
+    //     if(levelManager.lvObject.Complete) OnWin();
+    //     else OnLose();
+    // }
 }

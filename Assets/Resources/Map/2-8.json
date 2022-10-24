@@ -99,6 +99,17 @@
  "nextlayerid":5,
  "nextobjectid":5,
  "orientation":"hexagonal",
+ "properties":[
+        {
+         "name":"bull",
+         "type":"int",
+         "value":2
+        }, 
+        {
+         "name":"min",
+         "type":"int",
+         "value":21
+        }],
  "renderorder":"right-down",
  "staggeraxis":"y",
  "staggerindex":"odd",
@@ -130,23 +141,5 @@
  "tilewidth":14,
  "type":"map",
  "version":"1.9",
- "width":20,
- "layernumber":3,
- "properties":[
-   {
-    "name":"bullNumber",
-    "type":"int",
-    "value":2
-   }, 
-   {
-    "name":"normalStep",
-    "type":"int",
-    "value":20
-   }, 
-   {
-    "name":"starStep",
-    "type":"int",
-    "value":10
-   }],
- "bullnumber":2
+ "width":20
 }

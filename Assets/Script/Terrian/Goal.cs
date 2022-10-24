@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 
 public class Goal : MonoBehaviour
 {
@@ -16,12 +18,14 @@ public class Goal : MonoBehaviour
     void Start()
     {
         completeLevel = false;
+        thirdStar = false;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         CheckAroundTerrain();
+        GameObject.Find("Canvas/AchievedNumber/achievedNumber").gameObject.GetComponent<TMP_Text>().text = string.Format("{0}/{1}", curNumber.ToString(),winNumber.ToString());
         if(curNumber == winNumber)
         {
             Win(starNumber);
@@ -56,7 +60,7 @@ public class Goal : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         aroundTerrain.Remove(other.gameObject);
-                if (other.CompareTag("Bull"))
+        if (other.CompareTag("Bull"))
             {
                 curNumber--;
             }
@@ -64,7 +68,6 @@ public class Goal : MonoBehaviour
 
      private void Win(int starNumber)
     {
-        Debug.Log("You Win!");
         completeLevel = true;
         if(starNumber == winNumber)
         {
@@ -74,5 +77,9 @@ public class Goal : MonoBehaviour
         {
             thirdStar = true;
         }
+        Debug.Log(RotationCenter.tmpThirdStar);
+        GameObject.Find("Canvas").gameObject.GetComponent<EndPanel>().enabled = true;
+        GameObject root = GameObject.Find("LevelStarManager");
+        root.transform.Find("LevelManager").gameObject.SetActive(true); 
     }
 }

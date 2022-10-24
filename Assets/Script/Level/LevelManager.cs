@@ -14,12 +14,18 @@ public class LevelManager : MonoBehaviour
     void Update()
     {
         if(!lvObject.Complete)
+        {
         lvObject.Complete = Goal.completeLevel;
+        }
+        if(lvObject.Complete){
         if(!lvObject.FirstStar)
         lvObject.FirstStar = Goal.completeLevel;
         if(!lvObject.SecondStar)
         lvObject.SecondStar = Goal.secondStar;
+        if(lvObject.IsFirstWorld)
+        lvObject.SecondStar = true;
         if(!lvObject.ThirdStar)
         lvObject.ThirdStar = Goal.thirdStar;
+        }
     }
 }

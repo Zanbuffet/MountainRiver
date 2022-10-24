@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 8efbf4c5cc7cdb6489b182b359bec10e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -118,6 +118,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AroundTerrian: []
   selected: 0
+  starStep: 0
+  normalStep: 0
+  leftStarStepText: {fileID: 0}
 --- !u!114 &-4300838411222552512
 MonoBehaviour:
   m_ObjectHideFlags: 0

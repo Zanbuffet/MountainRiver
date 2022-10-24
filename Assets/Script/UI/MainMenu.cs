@@ -58,4 +58,13 @@ public class MainMenu : MonoBehaviour
             audioButton.image.sprite = AudioManager.Instance.isOn? audioIconSprites[0]: audioIconSprites[1];
         }
     }
+    public void ExitGame()
+    {
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #else
+        Application.Quit();
+        #endif
+
+    }
 }

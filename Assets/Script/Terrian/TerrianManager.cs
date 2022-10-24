@@ -27,7 +27,6 @@ public class TerrianManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-            Debug.Log(Input.mousePosition);
             if (hit.collider != null && hit.collider.CompareTag("Center"))
             {
                 if (rotationCenter == null )
@@ -51,7 +50,7 @@ public class TerrianManager : MonoBehaviour
                     //rotationCenterCollider.isTrigger = false;
                     //rotationCenterRigidbody.simulated = false;
                     rotationCenter = null;
-                    hint.transform.localPosition = new Vector3(-20,20,0);
+                    hint.transform.localPosition = new Vector3(-2000,2000,0);
                 }else
                 {
                     rotationCenter.selected = false;
@@ -80,4 +79,12 @@ public class TerrianManager : MonoBehaviour
         }
         }
 }
+    public void DeSelect()
+    {
+        if (rotationCenter != null )
+        {
+            rotationCenter.selected = false;
+            rotationCenter = null;
+        }
+    }
 }

@@ -10,6 +10,9 @@ TagManager:
   - Base
   - Enemy
   - Cropland
+  - Goal
+  - Hint
+  - Used
   layers:
   - Default
   - TransparentFX
@@ -23,7 +26,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Background
   - 
   - 
   - 

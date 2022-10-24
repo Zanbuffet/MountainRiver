@@ -77,8 +77,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_SortingOrder: 4
+  m_Sprite: {fileID: 21300000, guid: cc3b7b58574eeb74c9f6881878a92d7e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -122,7 +122,6 @@ MonoBehaviour:
   starStep: 0
   normalStep: 0
   leftStarStepText: {fileID: 3284505804584462002, guid: ba2618a8a000c4f4c9d6d181b902e675, type: 3}
-  leftNormalText: {fileID: 6275234680175637256, guid: 4abf34d89aa1ad0468b8c3107c3473ff, type: 3}
 --- !u!114 &7924548579061944902
 MonoBehaviour:
   m_ObjectHideFlags: 0

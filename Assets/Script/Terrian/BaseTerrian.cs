@@ -15,7 +15,7 @@ public class BaseTerrian : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        goalPos = this.transform.localPosition;
     }
 
     // Update is called once per frame
@@ -39,6 +39,7 @@ public class BaseTerrian : MonoBehaviour
             _curState = curState.idle;
             transform.localPosition = Vector3.MoveTowards(transform.localPosition, goalPos, 10f);
             locked = false;
+            RotationCenter.onMove = false;
             return;
         }
         Vector3 _dirMVec = _dirVec.normalized;

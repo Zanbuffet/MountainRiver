@@ -10,4 +10,9 @@ public class LevelObject : ScriptableObject
     public bool FirstStar;
     public bool SecondStar;
     public bool ThirdStar;
+    public bool IsFirstWorld;
+    private void OnEnable() {
+    this.hideFlags = HideFlags.DontUnloadUnusedAsset;
+}   
 }
+

@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 //using OpenCover.Framework.Model;
 using UnityEngine;
-
 public class Bull : MonoBehaviour
 {
     public List<GameObject> aroundTerrain = new List<GameObject>();
@@ -21,7 +20,6 @@ public class Bull : MonoBehaviour
     void Start()
     {
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
-        GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/bull2");
     }
 
     private void FixedUpdate()
@@ -61,7 +59,7 @@ public class Bull : MonoBehaviour
                         break;
                 }
                 terrain.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("");
-                terrain.transform.tag = "Base";
+                terrain.transform.tag = "Used";
             }
             if (terrain.CompareTag("Cropland"))
             {
@@ -80,9 +78,9 @@ public class Bull : MonoBehaviour
                         break;
                 }
                 terrain.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("");
-                terrain.transform.tag = "Base";
+                terrain.transform.tag = "Used";
                 // DoMove
-                GetComponent<BaseTerrian>().goalPos = terrain.transform.localPosition;     //牛被田野吸过去
+                GetComponent<BaseTerrian>().goalPos = terrain.GetComponent<BaseTerrian>().goalPos;     //牛被田野吸过去
                 GetComponent<BaseTerrian>()._curState = BaseTerrian.curState.move;
 
             }
@@ -93,13 +91,13 @@ public class Bull : MonoBehaviour
         switch (state)
                 {
                     case State.Small:
-                        m_SpriteRenderer.sprite = Resources.Load<Sprite>("Sprites/bull1");   
+                        m_SpriteRenderer.sprite = Resources.Load<Sprite>("Sprites/瘦牛");   
                         break;
                     case State.Middle:
-                        m_SpriteRenderer.sprite = Resources.Load<Sprite>("Sprites/bull2");   
+                        m_SpriteRenderer.sprite = Resources.Load<Sprite>("Sprites/牛");   
                         break;
                     case State.Big:                                                 
-                        m_SpriteRenderer.sprite = Resources.Load<Sprite>("Sprites/bull3");   
+                        m_SpriteRenderer.sprite = Resources.Load<Sprite>("Sprites/肥牛");   
                         break;
                 }
     }
@@ -115,8 +113,14 @@ public class Bull : MonoBehaviour
 
     private void Failed()
     {
-        #if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
-        #endif
+        // #if UNITY_EDITOR
+        //     UnityEditor.EditorApplication.isPlaying = false;
+        // #endif
+        GameObject root = GameObject.Find("Canvas");
+
+        root.transform.Find("FailedMenu").gameObject.SetActive(true); 
+        GameObject.Find("TerrianManager").GetComponent<TerrianManager>().DeSelect();
+        GameObject.Find("TerrianManager").GetComponent<TerrianManager>().enabled = false;
+        // InputSystem.DisableDevice(Keyboard.current);      
     }
 }

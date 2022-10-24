@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy1 : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     public List<GameObject> aroundTerrain = new List<GameObject>();
     
@@ -20,8 +20,8 @@ public class Enemy1 : MonoBehaviour
         {
             if (terrain.CompareTag("Grass"))
             {
-                terrain.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("");
-                terrain.transform.tag = "Base";
+                terrain.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/草2");
+                terrain.transform.tag = "Used";
             }
         }
     }

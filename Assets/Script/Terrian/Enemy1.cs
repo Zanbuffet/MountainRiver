@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy1 : MonoBehaviour
 {
     public List<GameObject> aroundTerrain = new List<GameObject>();
     
@@ -18,7 +18,11 @@ public class Enemy : MonoBehaviour
     {
         foreach (var terrain in aroundTerrain)
         {
-            //吃牛，代码在牛上
+            if (terrain.CompareTag("Enemy"))
+            {
+                terrain.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("");
+                terrain.transform.tag = "Used";
+            }
         }
     }
     

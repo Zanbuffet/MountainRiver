@@ -11,7 +11,7 @@ public class TmxReader : MonoBehaviour
         TextAsset text = Resources.Load<TextAsset>(string.Format("{0}/{1}", "Map", levelFile));  // Assets/Resources/Map
         JSONNode data = JSONNode.Parse(text.text).AsObject;//将tmx文本转化为json对象
         //foreach (var layer in data["layers"])
-        for (int cur_layer = 0; cur_layer < data["layernumber"]; cur_layer++)//["type"] ==  "objectgroup"   "tilelayer"
+        for (int cur_layer = 0; cur_layer < 3; cur_layer++)//["type"] ==  "objectgroup"   "tilelayer"
         {
             Dictionary<string, JSONNode> objectsDic = new Dictionary<string, JSONNode>();
             var layer = Instantiate(Resources.Load(string.Format("{0}/{1}", "Grids", "LayerPre"))) as GameObject;
@@ -53,8 +53,10 @@ public class TmxReader : MonoBehaviour
                         //var go = Instantiate(Resources.Load(string.Format("{0}/{1}", "Grids", "GridPre"))) as GameObject;
                         var go = Instantiate(Resources.Load(string.Format("{0}/{1}", "Grids", gid-1))) as GameObject;
                         go.name = (string.Format("({0},{1})", j+1, i+1));
-                        go.GetComponent<SpriteRenderer>().sprite = Resources.LoadAll<Sprite>("Map/hexmini")[gid - 1];
+                        //go.GetComponent<SpriteRenderer>().sprite = Resources.LoadAll<Sprite>("Map/hexmini")[gid - 1];
+                        if(!go.CompareTag("Bull")){
                         go.GetComponent<SpriteRenderer>().sortingOrder = draw_layer;
+                        }
                         go.transform.SetParent(layer.transform);
 
                         if(go.CompareTag("Goal"))
@@ -63,8 +65,8 @@ public class TmxReader : MonoBehaviour
                         }
                         if(go.CompareTag("Center"))
                         {
-                            go.GetComponent<RotationCenter>().starStep = data["properties"][2]["value"];//三星步数
-                            go.GetComponent<RotationCenter>().normalStep = data["properties"][1]["value"];//最大步数
+                            go.GetComponent<RotationCenter>().starStep = data["properties"][1]["value"];//三星步数
+                            //go.GetComponent<RotationCenter>().normalStep = data["properties"][1]["value"];//最大步数
                         }
 
                         //parse tiled properties when drawing    ////not test yet!!!!!!
