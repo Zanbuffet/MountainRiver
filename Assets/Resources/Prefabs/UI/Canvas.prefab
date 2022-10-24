@@ -696,6 +696,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4424018627678039345}
     m_Modifications:
+    - target: {fileID: 8026853287779384708, guid: 657410791196957479627cdca135ce61, type: 3}
+      propertyPath: levelNumber
+      value: 
+      objectReference: {fileID: 2445674065271540699}
     - target: {fileID: 8026853287779384952, guid: 657410791196957479627cdca135ce61, type: 3}
       propertyPath: m_Name
       value: PauseMenu
@@ -790,6 +794,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 657410791196957479627cdca135ce61, type: 3}
+--- !u!114 &2445674065271540699 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7718813122261779578, guid: 657410791196957479627cdca135ce61, type: 3}
+  m_PrefabInstance: {fileID: 5399389588742262689}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &2705362313596695000 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8026853287779384953, guid: 657410791196957479627cdca135ce61, type: 3}
