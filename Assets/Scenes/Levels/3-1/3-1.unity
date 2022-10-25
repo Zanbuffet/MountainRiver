@@ -842,6 +842,30 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.9953984
       objectReference: {fileID: 0}
+    - target: {fileID: 4196652264923892530, guid: 0f71a0fa886dacd44a738a31bb1520e9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 80.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196652264923892530, guid: 0f71a0fa886dacd44a738a31bb1520e9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -286.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196652264923892531, guid: 0f71a0fa886dacd44a738a31bb1520e9, type: 3}
+      propertyPath: m_text
+      value: "\u5F3A\u76D7\u725B\u4F1A\u622A\u53D6\u8349\u548C\u516D\u516D\uFF0C\u8FDC\u79BB\u4ED6\u4EEC\uFF01"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196652264923892531, guid: 0f71a0fa886dacd44a738a31bb1520e9, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196652265028150400, guid: 0f71a0fa886dacd44a738a31bb1520e9, type: 3}
+      propertyPath: m_text
+      value: "\u622A\u53D6"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196652265028150407, guid: 0f71a0fa886dacd44a738a31bb1520e9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -51.8
+      objectReference: {fileID: 0}
     - target: {fileID: 4196652266463767764, guid: 0f71a0fa886dacd44a738a31bb1520e9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -893,6 +917,14 @@ PrefabInstance:
     - target: {fileID: 4196652266463767764, guid: 0f71a0fa886dacd44a738a31bb1520e9, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 296.60623
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196652266553042544, guid: 0f71a0fa886dacd44a738a31bb1520e9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 133.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4196652266553042545, guid: 0f71a0fa886dacd44a738a31bb1520e9, type: 3}
+      propertyPath: m_text
+      value: "\u8FDC\u79BB"
       objectReference: {fileID: 0}
     - target: {fileID: 7849951545797728448, guid: 0f71a0fa886dacd44a738a31bb1520e9, type: 3}
       propertyPath: m_text

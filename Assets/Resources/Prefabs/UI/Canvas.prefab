@@ -448,7 +448,7 @@ PrefabInstance:
     - target: {fileID: 5227124230144334392, guid: be9d286bf05a418478b5c3520cf54f79, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: f3147cd67d82c9d4aabbb3c0729f0986, type: 2}
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 5227124230144334392, guid: be9d286bf05a418478b5c3520cf54f79, type: 3}
       propertyPath: m_fontColor.b
       value: 0
@@ -468,7 +468,7 @@ PrefabInstance:
     - target: {fileID: 5227124230144334392, guid: be9d286bf05a418478b5c3520cf54f79, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 4665142963334586351, guid: f3147cd67d82c9d4aabbb3c0729f0986, type: 2}
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 5227124230144334392, guid: be9d286bf05a418478b5c3520cf54f79, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4278190080
@@ -1214,7 +1214,7 @@ PrefabInstance:
     - target: {fileID: 40249369593968526, guid: 5be8feb8f0247a54885677fc0390847f, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: f3147cd67d82c9d4aabbb3c0729f0986, type: 2}
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 40249369593968526, guid: 5be8feb8f0247a54885677fc0390847f, type: 3}
       propertyPath: m_fontSizeBase
       value: 36
@@ -1222,7 +1222,7 @@ PrefabInstance:
     - target: {fileID: 40249369593968526, guid: 5be8feb8f0247a54885677fc0390847f, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 4665142963334586351, guid: f3147cd67d82c9d4aabbb3c0729f0986, type: 2}
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 40249369593968526, guid: 5be8feb8f0247a54885677fc0390847f, type: 3}
       propertyPath: m_VerticalAlignment
       value: 512

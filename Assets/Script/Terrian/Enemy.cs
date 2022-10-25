@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(this.transform.tag == "enemy"){
         foreach (var terrain in aroundTerrain)
         {
             if (terrain.CompareTag("Grass"))
@@ -25,6 +26,7 @@ public class Enemy : MonoBehaviour
                 AudioSource.PlayClipAtPoint(Resources.Load<UnityEngine.AudioClip>((string.Format("{0}/{1}", "Audio", "强盗牛吃东西"))), transform.localPosition);
                 terrain.transform.tag = "Used";
             }
+        }
         }
     }
     
