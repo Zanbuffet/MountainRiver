@@ -30,6 +30,7 @@ public class EndPanel : MonoBehaviour
     
     public void OnWin()
     {
+        
         levelManager = FindObjectOfType<LevelManager>();
         endPanel.SetActive(true);
         result.sprite = resultSprites[1];
@@ -40,6 +41,7 @@ public class EndPanel : MonoBehaviour
         goal2.isOn = levelManager.lvObject.SecondStar ? true : false;
         star3.sprite = levelManager.lvObject.ThirdStar ? starSprites[1] : starSprites[0];
         goal3.isOn = levelManager.lvObject.ThirdStar ? true : false;
+        
     }
 
     public void OnLose()
@@ -69,6 +71,8 @@ public class EndPanel : MonoBehaviour
         levelManager = FindObjectOfType<LevelManager>();
         if(levelManager.lvObject.Complete) OnWin();
         else OnLose();
+        if(!GameObject.Find("AudioManager").GetComponent<AudioSource>().mute)
+        AudioSource.PlayClipAtPoint(Resources.Load<UnityEngine.AudioClip>((string.Format("{0}/{1}", "Audio", "胜利"))), transform.localPosition);
         
     }
 

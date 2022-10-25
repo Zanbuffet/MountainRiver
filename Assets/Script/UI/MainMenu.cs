@@ -18,18 +18,24 @@ public class MainMenu : MonoBehaviour
     public void OnStartGame()
     {
         //load level selection scene
+        if(!GameObject.Find("AudioManager").GetComponent<AudioSource>().mute)
+        AudioSource.PlayClipAtPoint(Resources.Load<UnityEngine.AudioClip>((string.Format("{0}/{1}", "Audio", "UI按钮"))), transform.localPosition);
         SceneManager.LoadScene(1);  //temp
     }
 
     public void ShowCredits()
     {
         //show credits panel
+        if(!GameObject.Find("AudioManager").GetComponent<AudioSource>().mute)
+        AudioSource.PlayClipAtPoint(Resources.Load<UnityEngine.AudioClip>((string.Format("{0}/{1}", "Audio", "UI按钮"))), transform.localPosition);
         creditsPanel.SetActive(true);
         
     }
 
     public void CloseCredits()
     {
+        if(!GameObject.Find("AudioManager").GetComponent<AudioSource>().mute)
+        AudioSource.PlayClipAtPoint(Resources.Load<UnityEngine.AudioClip>((string.Format("{0}/{1}", "Audio", "UI按钮"))), transform.localPosition);
         creditsPanel.SetActive(false);
     }
 
@@ -37,13 +43,13 @@ public class MainMenu : MonoBehaviour
     {
         if (AudioManager.Instance!=null)
         {
-            if(AudioManager.Instance.isOn)
+            if(AudioManager.Instance.GetComponent<AudioSource>().mute == true)
             {
-                AudioManager.Instance.ToggleAudio(false);
+                AudioManager.Instance.GetComponent<AudioSource>().mute = false;
             }
             else
             {
-                AudioManager.Instance.ToggleAudio(true);
+                AudioManager.Instance.GetComponent<AudioSource>().mute = true;
 
             }
             UpdateAudioIcon();
@@ -55,11 +61,13 @@ public class MainMenu : MonoBehaviour
     {
         if(AudioManager.Instance!=null)
         {
-            audioButton.image.sprite = AudioManager.Instance.isOn? audioIconSprites[0]: audioIconSprites[1];
+            audioButton.image.sprite = AudioManager.Instance.GetComponent<AudioSource>().mute? audioIconSprites[1]: audioIconSprites[0];
         }
     }
     public void ExitGame()
     {
+        if(!GameObject.Find("AudioManager").GetComponent<AudioSource>().mute)
+        AudioSource.PlayClipAtPoint(Resources.Load<UnityEngine.AudioClip>((string.Format("{0}/{1}", "Audio", "UI按钮"))), transform.localPosition);
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
         #else

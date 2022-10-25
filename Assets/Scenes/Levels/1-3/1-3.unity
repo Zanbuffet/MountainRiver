@@ -130,6 +130,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2896758930484928796, guid: bb9eb102661fe9145a26b7da32be93fb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2896758930484928796, guid: bb9eb102661fe9145a26b7da32be93fb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: playSFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 2896758930484928796, guid: bb9eb102661fe9145a26b7da32be93fb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AudioClip2, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4424018627678039341, guid: bb9eb102661fe9145a26b7da32be93fb, type: 3}
       propertyPath: m_Name
       value: Canvas

@@ -14,7 +14,7 @@ public class TerrianManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        Bull.bullCode = 0;
     }
 
     /*
@@ -41,6 +41,8 @@ public class TerrianManager : MonoBehaviour
                     rotationCenter.selected = true;
                     Debug.Log(rotationCenter.name);
                     hint.transform.localPosition = rotationCenter.transform.localPosition;
+                    if(!GameObject.Find("AudioManager").GetComponent<AudioSource>().mute)
+                    AudioSource.PlayClipAtPoint(Resources.Load<UnityEngine.AudioClip>((string.Format("{0}/{1}", "Audio", "中心风车"))), transform.localPosition);
 
                 }
                 else if (hit.collider.GetComponent<RotationCenter>() == rotationCenter )
@@ -65,6 +67,8 @@ public class TerrianManager : MonoBehaviour
                     rotationCenter.selected = true;
                     Debug.Log(rotationCenter.name);
                     hint.transform.localPosition = rotationCenter.transform.localPosition;
+                    if(!GameObject.Find("AudioManager").GetComponent<AudioSource>().mute)
+                    AudioSource.PlayClipAtPoint(Resources.Load<UnityEngine.AudioClip>((string.Format("{0}/{1}", "Audio", "中心风车"))), transform.localPosition);
                 }
             }
             

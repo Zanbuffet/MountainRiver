@@ -17,7 +17,9 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     private void Start() {
+        if(levelNumber!=null)
         levelNumber.text = GameObject.Find("Level").GetComponent<TmxReader>().levelFile;
     }
+    
     
 }

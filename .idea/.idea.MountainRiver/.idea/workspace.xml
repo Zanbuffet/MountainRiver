@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="87bd051c-5274-4533-ab74-ce724ea5b9c0" name="Changes" comment="" />
+    <list default="true" id="87bd051c-5274-4533-ab74-ce724ea5b9c0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MountainRiver/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MountainRiver/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Font/YeZiGongChangWeiNiTi-2.ttf.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Canvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/bull1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/bull1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/bull2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/bull2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/bull3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/bull3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/局内教学背板.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/局内教学背板.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Sprites/狮子.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Sprites/狮子.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelSelection.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelSelection.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/1-1/1-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/1-1/1-1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/1-2/1-2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/1-2/1-2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/2-1/2-1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/2-1/2-1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/2-2/2-2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/2-2/2-2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/2-2/2-2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/2-2/2-2.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/2-3/2-3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/2-3/2-3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/2-3/2-3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/2-3/2-3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/2-5/2-5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/2-5/2-5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/AudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Terrian/Enemy1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Terrian/Enemy1.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Terrian/Goal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Terrian/Goal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/TmxReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/TmxReader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/UI/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/UI/PauseMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build.7z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,19 +48,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "settings.editor.selected.configurable": "CodeLensConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Build\MountainRiver.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="D:\Project\UnityProject\MountainRiver\Build" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="F:\Unity\2021.3.10f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\Development\Unity Hub\Editor\2021.3.10f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath E:\Unity合作项目\MountainRiver -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="E:\Unity合作项目\MountainRiver" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -71,6 +109,7 @@
       <workItem from="1665193355403" duration="7708000" />
       <workItem from="1666265965679" duration="2174000" />
       <workItem from="1666282300189" duration="916000" />
+      <workItem from="1666711077539" duration="3142000" />
     </task>
     <servers />
   </component>

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -7518765881081116211}
   - component: {fileID: 3627889624546863180}
   - component: {fileID: -262446013464750717}
+  - component: {fileID: 3599876372338981472}
   m_Layer: 2
   m_Name: Hint
   m_TagString: Hint
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 0bda842a31f1eb643ba529b7cce5fa87, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cbdb2143bb8413a4b811d8dfb158e8f0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -137,3 +138,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3599876372338981472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5019290135546144089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c6216fa904f1c49a9e0bf3b0d19918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  auidiosss:
+  - {fileID: 8300000, guid: e9fd9db76134c944bade244a389dfabf, type: 3}
+  - {fileID: 8300000, guid: 6f78fdae86d5c0e43bbce1e4d3514b09, type: 3}

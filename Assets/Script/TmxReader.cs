@@ -57,6 +57,10 @@ public class TmxReader : MonoBehaviour
                         if(!go.CompareTag("Bull")){
                         go.GetComponent<SpriteRenderer>().sortingOrder = draw_layer;
                         }
+                        if(gid == 9)
+                        {
+                            go.GetComponent<SpriteRenderer>().sortingOrder = 6;
+                        }
                         go.transform.SetParent(layer.transform);
 
                         if(go.CompareTag("Goal"))

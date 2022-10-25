@@ -13,6 +13,8 @@ TagManager:
   - Goal
   - Hint
   - Used
+  - Lion
+  - UI
   layers:
   - Default
   - TransparentFX

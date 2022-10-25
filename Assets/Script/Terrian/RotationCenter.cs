@@ -36,8 +36,10 @@ public class RotationCenter : MonoBehaviour
                 leftStarStep--;
                 onMove = true;
                 Debug.Log(leftStarStep);
+                if(!GameObject.Find("AudioManager").GetComponent<AudioSource>().mute)
+                AudioSource.PlayClipAtPoint(Resources.Load<UnityEngine.AudioClip>((string.Format("{0}/{1}", "Audio", "转动Q"))), transform.localPosition);
                 }
-
+                
                 // leftNormalStep--;
                 foreach (var at in AroundTerrian)
                 {
@@ -57,8 +59,10 @@ public class RotationCenter : MonoBehaviour
                 leftStarStep--;
                 onMove = true;
                 Debug.Log(leftStarStep);
+                if(!GameObject.Find("AudioManager").GetComponent<AudioSource>().mute)
+                AudioSource.PlayClipAtPoint(Resources.Load<UnityEngine.AudioClip>((string.Format("{0}/{1}", "Audio", "转动E"))), transform.localPosition);
                 }
-                
+
                 foreach (var at in AroundTerrian)
                 {
                     if(at.GetComponent<BaseTerrian>().locked == false){

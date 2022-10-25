@@ -11,6 +11,7 @@ public class Goal : MonoBehaviour
     public int curNumber = 0;
     public int starNumber = 0;
     public int step = 0;
+    public bool onComplete = false;
     public static bool completeLevel;
     public static bool secondStar;
     public static bool thirdStar;
@@ -26,9 +27,10 @@ public class Goal : MonoBehaviour
     {
         CheckAroundTerrain();
         GameObject.Find("Canvas/AchievedNumber/achievedNumber").gameObject.GetComponent<TMP_Text>().text = string.Format("{0}/{1}", curNumber.ToString(),winNumber.ToString());
-        if(curNumber == winNumber)
+        if(curNumber == winNumber && onComplete == false)
         {
             Win(starNumber);
+            onComplete = true;
         }
 
     }
@@ -77,9 +79,16 @@ public class Goal : MonoBehaviour
         {
             thirdStar = true;
         }
-        Debug.Log(RotationCenter.tmpThirdStar);
+
+        if(!GameObject.Find("AudioManager").GetComponent<AudioSource>().mute)
+        AudioSource.PlayClipAtPoint(Resources.Load<UnityEngine.AudioClip>((string.Format("{0}/{1}", "Audio", "胜利"))), transform.localPosition);
+
+        var audioManager = GameObject.Find("AudioManager");
+        audioManager.GetComponent<AudioSource>().clip = null;
         GameObject.Find("Canvas").gameObject.GetComponent<EndPanel>().enabled = true;
         GameObject root = GameObject.Find("LevelStarManager");
         root.transform.Find("LevelManager").gameObject.SetActive(true); 
+        GameObject.Find("TerrianManager").GetComponent<TerrianManager>().DeSelect();
+        GameObject.Find("TerrianManager").GetComponent<TerrianManager>().enabled = false;
     }
 }
