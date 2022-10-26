@@ -25,6 +25,10 @@ public class EndPanel : MonoBehaviour
     [SerializeField] private Sprite[] resultSprites;
 
     [SerializeField] private Sprite[] starSprites;
+    [SerializeField] private GameObject endCover;
+    [SerializeField] private GameObject endLongCover;
+    [SerializeField] private GameObject CG;
+    bool loading = false;
 
 
     
@@ -57,13 +61,33 @@ public class EndPanel : MonoBehaviour
 
     public void NextLevel()
     {
+        endCover.SetActive(true);
+        if (!loading)
+            StartCoroutine(NextLevelDelay(1f));
+    }
+
+    public void FistNextLevel()
+    {
+        endLongCover.SetActive(true);
+        CG.SetActive(true);
+        if (!loading)
+            StartCoroutine(NextLevelDelay(5f));
+    }
+    IEnumerator NextLevelDelay(float WaitSecond)
+    {
+        loading = true;
+        
+        yield return new WaitForSeconds(WaitSecond); // This statement will make the coroutine wait for the number of seconds you put there, 2 seconds in this case
         endPanel.SetActive(false);
         int index = SceneManager.GetActiveScene().buildIndex + 1;
 
         if (index >= SceneManager.sceneCountInBuildSettings) SceneManager.LoadScene(0);
         else
             SceneManager.LoadScene(index);
+        loading = false;
     }
+    
+
     private IEnumerator Start()
     {
         //test
@@ -76,6 +100,7 @@ public class EndPanel : MonoBehaviour
         
     }
 
+ 
     // private void Start()
     // {
     //     levelManager = FindObjectOfType<LevelManager>();

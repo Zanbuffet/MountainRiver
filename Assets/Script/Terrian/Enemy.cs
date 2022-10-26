@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(this.transform.tag == "enemy"){
+        if(this.transform.tag == "Enemy"){
         foreach (var terrain in aroundTerrain)
         {
             if (terrain.CompareTag("Grass"))

@@ -8,6 +8,8 @@ public class LevelSelection : MonoBehaviour
     [SerializeField] private GameObject level1;
     [SerializeField] private GameObject level2;
     [SerializeField] private GameObject level3;
+    [SerializeField] private GameObject endCover;
+    bool loading = false;
 
     public void BackToMainMenu()
     {
@@ -38,6 +40,16 @@ public class LevelSelection : MonoBehaviour
     
     public void SelectLevel(int levelID)
     {
+        endCover.SetActive(true);
+        if (!loading)
+            StartCoroutine(SelectLevelMenuDelay(1f, levelID));
+    }
+
+    IEnumerator SelectLevelMenuDelay(float WaitSecond, int levelID)
+    {
+        loading = true;
+        yield return new WaitForSeconds(WaitSecond); // This statement will make the coroutine wait for the number of seconds you put there, 2 seconds in this case
         SceneManager.LoadScene(levelID);
+        loading = false;
     }
 }

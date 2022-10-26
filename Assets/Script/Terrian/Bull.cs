@@ -168,13 +168,12 @@ public class Bull : MonoBehaviour
         // #if UNITY_EDITOR
         //     UnityEditor.EditorApplication.isPlaying = false;
         // #endif
-        
-
+        GameObject root = GameObject.Find("Canvas");
 
         var audioManager = GameObject.Find("AudioManager");
         audioManager.GetComponent<AudioSource>().clip = null;
 
-        GameObject root = GameObject.Find("Canvas");
+        if(!GameObject.Find("AudioManager").GetComponent<AudioSource>().mute)
         AudioSource.PlayClipAtPoint(Resources.Load<UnityEngine.AudioClip>((string.Format("{0}/{1}", "Audio", "失败"))), transform.localPosition);
         root.transform.Find("FailedMenu").gameObject.SetActive(true); 
         GameObject.Find("TerrianManager").GetComponent<TerrianManager>().DeSelect();
