@@ -35,16 +35,16 @@ public class AudioManager : MonoBehaviour
     }
 
     private void Update() {
-        if (Input.GetMouseButtonDown(0))
-        {
-            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-            if (hit.collider != null && hit.collider.CompareTag("UI"));
-            {
-                if(!GameObject.Find("AudioManager").GetComponent<AudioSource>().mute)
-                AudioSource.PlayClipAtPoint(Resources.Load<UnityEngine.AudioClip>((string.Format("{0}/{1}", "Audio", "胜利"))), transform.localPosition);
-            }
+        // if (Input.GetMouseButtonDown(0))
+        // {
+        //     RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+        //     if (hit.collider != null && hit.collider.CompareTag("UI"));
+        //     {
+        //         if(!GameObject.Find("AudioManager").GetComponent<AudioSource>().mute)
+        //         AudioSource.PlayClipAtPoint(Resources.Load<UnityEngine.AudioClip>((string.Format("{0}/{1}", "Audio", "胜利"))), transform.localPosition);
+        //     }
 
-        }
+        // }
     }
 
 

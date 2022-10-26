@@ -31,6 +31,7 @@ public class PlayVideo : MonoBehaviour
                 StartMove.SetActive(false);
                 GameObject.Destroy(StartMove);
                 StartMove = null;
+                Destroy(GameObject.Find("CoverCanvas"));
                 int index = SceneManager.GetActiveScene().buildIndex + 1;
 
                 if (index >= SceneManager.sceneCountInBuildSettings) SceneManager.LoadScene(0);

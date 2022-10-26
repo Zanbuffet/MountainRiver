@@ -1129,6 +1129,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4424018627678039345}
     m_Modifications:
+    - target: {fileID: 8026853287779384708, guid: c8b7f4b93fcdf3a41818b90e17640f49, type: 3}
+      propertyPath: endCover
+      value: 
+      objectReference: {fileID: 8556133888866043901}
     - target: {fileID: 8026853287779384952, guid: c8b7f4b93fcdf3a41818b90e17640f49, type: 3}
       propertyPath: m_Name
       value: FailedMenu

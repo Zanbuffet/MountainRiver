@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
         {
             if (terrain.CompareTag("Grass"))
             {
-                terrain.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/草2");
+                terrain.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("");
                 if(!GameObject.Find("AudioManager").GetComponent<AudioSource>().mute)
                 AudioSource.PlayClipAtPoint(Resources.Load<UnityEngine.AudioClip>((string.Format("{0}/{1}", "Audio", "强盗牛吃东西"))), transform.localPosition);
                 terrain.transform.tag = "Used";

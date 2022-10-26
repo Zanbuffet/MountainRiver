@@ -108,7 +108,7 @@
         {
          "name":"min",
          "type":"int",
-         "value":6
+         "value":17
         }],
  "renderorder":"right-down",
  "staggeraxis":"y",
