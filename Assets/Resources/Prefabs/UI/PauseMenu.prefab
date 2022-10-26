@@ -230,6 +230,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelNumber: {fileID: 0}
+  endCover: {fileID: 0}
+  m_LatestLevel: {fileID: 11400000, guid: da1a16a20c492c9419cdb6350eb17440, type: 2}
 --- !u!1 &8026853288112495197
 GameObject:
   m_ObjectHideFlags: 0

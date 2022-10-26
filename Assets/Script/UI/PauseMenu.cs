@@ -9,9 +9,16 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] TextMeshProUGUI levelNumber;
     [SerializeField] private GameObject endCover;
     bool loading = false;
+
+    [SerializeField] private LatestLevel m_LatestLevel;
+
     public void BackToMainMenu()
     {
         endCover.SetActive(true);
+
+        int levelIndex = SceneManager.GetActiveScene().buildIndex;
+        m_LatestLevel.latestLevelID = levelIndex >= 15? 3:((levelIndex >= 7) ? 2 : 1);
+
         if (!loading)
             StartCoroutine(BackToMainMenuDelay(1f));
     }

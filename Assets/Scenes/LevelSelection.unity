@@ -13455,6 +13455,7 @@ MonoBehaviour:
   level2: {fileID: 824693561}
   level3: {fileID: 2017189005}
   endCover: {fileID: 1073171658}
+  m_LatestLevel: {fileID: 11400000, guid: da1a16a20c492c9419cdb6350eb17440, type: 2}
 --- !u!114 &1602424541
 MonoBehaviour:
   m_ObjectHideFlags: 0
