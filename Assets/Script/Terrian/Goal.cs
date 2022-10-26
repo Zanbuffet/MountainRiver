@@ -19,6 +19,7 @@ public class Goal : MonoBehaviour
     void Start()
     {
         completeLevel = false;
+        secondStar = false;
         thirdStar = false;
     }
 

@@ -4,10 +4,12 @@ using System.Collections.Generic;
 //using OpenCover.Framework.Model;
 using UnityEngine;
 using UnityEngine.Audio;
+using TMPro;
 public class Bull2 : MonoBehaviour
 {
     public List<GameObject> aroundTerrain = new List<GameObject>();
 
+    public GameObject bullState;
     public enum State
     {
         Small,
@@ -21,13 +23,32 @@ public class Bull2 : MonoBehaviour
     void Start()
     {
         m_SpriteRenderer = GetComponent<SpriteRenderer>();
+        Bull.bullCode++;
+        Debug.Log(Bull.bullCode);
+        combineState();
     }
 
     private void FixedUpdate()
     {
         CheckAroundTerrain();
         CheckSprite();
+        CheckStatement();
     }
+    private void combineState()
+    {
+        GameObject root = GameObject.Find("Canvas");
+
+        if(Bull.bullCode == 1)
+        {
+            bullState = root.transform.Find("BullState1").gameObject;
+            bullState.SetActive(true); 
+        }else if(Bull.bullCode == 2)
+        {
+            bullState = root.transform.Find("BullState2").gameObject;
+            bullState.SetActive(true); 
+        }
+    }
+
     
     /// <summary>
     /// 检查周围地块是否需要进行交互
@@ -106,15 +127,30 @@ public class Bull2 : MonoBehaviour
         switch (state)
                 {
                     case State.Small:
-                        m_SpriteRenderer.sprite = Resources.Load<Sprite>("Sprites/瘦牛");   
+                        m_SpriteRenderer.sprite = Resources.Load<Sprite>("Sprites/瘦牛2");   
                         break;
                     case State.Middle:
-                        m_SpriteRenderer.sprite = Resources.Load<Sprite>("Sprites/牛");   
+                        m_SpriteRenderer.sprite = Resources.Load<Sprite>("Sprites/牛2");   
                         break;
                     case State.Big:                                                 
-                        m_SpriteRenderer.sprite = Resources.Load<Sprite>("Sprites/肥牛");   
+                        m_SpriteRenderer.sprite = Resources.Load<Sprite>("Sprites/肥牛2");   
                         break;
                 }
+    }
+    private void CheckStatement()
+    {
+        switch (state)
+        {
+            case State.Small:                                               // 游戏失败
+                bullState.GetComponentInChildren<TMP_Text>().text = string.Format("{0}", "50%");
+                break;
+            case State.Middle:
+                bullState.GetComponentInChildren<TMP_Text>().text = string.Format("{0}", "100%");
+                break;
+            case State.Big:
+                bullState.GetComponentInChildren<TMP_Text>().text = string.Format("{0}", "200%");
+                break;
+        }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

@@ -103,7 +103,7 @@
         {
          "name":"bull",
          "type":"int",
-         "value":1
+         "value":2
         }, 
         {
          "name":"min",
